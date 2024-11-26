@@ -10,15 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-TARGET =		Horde
+TARGET =		Violence
 
 CXX =			c++
 
 CXXFLAGS =		-Wall -Wextra -Werror -I.
 
-SRCS =			Zombie.cpp			\
-				main.cpp			\
-				zombieHorde.cpp		\
+SRCS =			main.cpp			\
+				HumanA.cpp			\
+				HumanB.cpp			\
+				Weapon.cpp			\
 
 OBJS =			$(SRCS:.cpp=.o)
 

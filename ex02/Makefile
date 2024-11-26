@@ -10,15 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-TARGET =		Horde
+TARGET =		Brain
 
 CXX =			c++
 
 CXXFLAGS =		-Wall -Wextra -Werror -I.
 
-SRCS =			Zombie.cpp			\
-				main.cpp			\
-				zombieHorde.cpp		\
+SRCS =			main.cpp			\
 
 OBJS =			$(SRCS:.cpp=.o)
 
