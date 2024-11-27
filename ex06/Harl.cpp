@@ -34,14 +34,26 @@ void Harl::error(void) {
 
 void Harl::complain( std::string level ) {
     const       std::string name_level[4] = {"debug", "info", "warning", "error"};
-    priv_fct    fct[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    int         swi = -1;
 
     for (int i = 0; i < 4; i++) {
         if (level == name_level[i]) {
-            (this->*fct[i])();
-            return ;
+            swi = i;
+            break ;
         }
     }
-    std::cout << "[OTHER]" << std::endl;
-    std::cout << "F*ck off, I'm leaving a bad review like i did for Gap's Fnac!!" << std::endl;
+    switch (swi) {
+        case 0:
+            debug();
+        case 1:
+            info();
+        case 2:
+            warning();
+        case 3:
+            error();
+            break ;
+        default :
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+            break ;
+    }
 }
