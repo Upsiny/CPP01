@@ -2,10 +2,11 @@
 #include <iostream>
 #include "Harl.hpp"
 
-int main(int ac, char **av) {
-    (void)ac;
+int main() {
     Harl    karen;
 
-    karen.complain(av[1]);
+    karen.complain("debug");
+    //karen.complain("oui");
+    //karen.complain("warning");
     return 0;
 }
